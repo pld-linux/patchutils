@@ -4,12 +4,12 @@ Summary(pt_BR):	UtilitАrio para Patches
 Summary(ru):	Набор инструментов для работы с patch-файлами
 Summary(uk):	Наб╕р ╕нструмент╕в для роботи з patch-файлами
 Name:		patchutils
-Version:	0.2.25
+Version:	0.2.26
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.bz2
-# Source0-md5:	4a86341ad45eff6bc961c45f3af2348d
+Source0:	http://cyberelk.net/tim/data/%{name}/stable/%{name}-%{version}.tar.bz2
+# Source0-md5:	798d68d9d7ec3499d63b075ca4d4a6a9
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	autoconf
