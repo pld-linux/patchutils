@@ -58,7 +58,7 @@ patch contains a given regular expression.
 Interdiff generuje inkrementalne patche z dwóch patchy stworzonych w
 stosunku do jednego ¼ród³a.
 
-Combinediff generuje pojedyñczy patch z dwóch inkrementalnych patchy
+Combinediff generuje pojedynczy patch z dwóch inkrementalnych patchy
 pozwalaj±c na ich ³±czenie. Wygenerowany patch modyfikuje pliki
 jedynie jednokrotnie.
 
