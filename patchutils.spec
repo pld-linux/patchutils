@@ -1,15 +1,16 @@
+%define _pre pre3
 Summary:	Patchutils is a small collection of programs that operate on patch files
 Summary(pl):	Kolekcja maЁych programСw operuj╠cych na plikach patch
 Summary(pt_BR):	UtilitАrio para Patches
 Summary(ru):	Набор инструментов для работы с patch-файлами
 Summary(uk):	Наб╕р ╕нструмент╕в для роботи з patch-файлами
 Name:		patchutils
-Version:	0.2.24
-Release:	1
+Version:	0.2.25
+Release:	0.%{_pre}.1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.bz2
-# Source0-md5:	de56faa399926e145b782f3ebcad5529
+Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}%{_pre}.tar.bz2
+# Source0-md5:	81210503d7c6a316642e0fde4b18c037
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	autoconf
@@ -19,8 +20,8 @@ BuildRequires:	patch
 Requires:	diffutils
 Requires:	patch
 Provides:	interdiff
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	interdiff
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Interdiff generates an incremental patch from two patches against a
@@ -136,7 +137,7 @@ patch-файл╕в непотр╕бних patch'╕в на основ╕ шаблон╕в ╕мен файл╕в, що
 редагувались вручну.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_pre}
 %patch1 -p0
 
 %build
@@ -151,13 +152,14 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS README
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
