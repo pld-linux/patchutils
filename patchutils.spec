@@ -55,10 +55,10 @@ Grepdiff displays a list of the files modified by a patch where the
 patch contains a given regular expression.
 
 %description -l pl
-Interdiff generuje inkrementalne patche z dwóch patchy stworzonych w
+Interdiff generuje przyrostowe patche z dwóch patchy stworzonych w
 stosunku do jednego ¼ród³a.
 
-Combinediff generuje pojedynczy patch z dwóch inkrementalnych patchy
+Combinediff generuje pojedynczy patch z dwóch przyrostowych patchy
 pozwalaj±c na ich ³±czenie. Wygenerowany patch modyfikuje pliki
 jedynie jednokrotnie.
 
@@ -68,7 +68,7 @@ nie pasuj±ce) do wzorca shella.
 Fixcvsdiff s³u¿y do poprawiania plików wygenerowanych przez `cvs
 diff'.
 
-Rediff poprawia rêcznie-edytowane patche poprzez porównanie
+Rediff poprawia rêcznie modyfikowane patche poprzez porównanie
 oryginalnego patcha ze zmodyfikowanym i poprawianie przesuniêæ i
 zliczeñ.
 
@@ -77,8 +77,8 @@ Lsdiff wy¶wietla krótk± listê plików, które patch modyfikuje wraz z
 
 Splitdiff dzieli patch na wiêcej patchy tak, ¿e poszczególne patche
 modyfikuj± jedynie okre¶lony plik jednokrotnie. W ten sposób plik
-zawieraj±cy kilka inkrementalnych zmian mo¿e byæ zamieniony w kilka
-inkrementalnych ³at.
+zawieraj±cy kilka przyrostowych zmian mo¿e byæ zamieniony w kilka
+przyrostowych ³at.
 
 Grepdiff wy¶wietla listê plików modyfikowanych przez patch gdzie patch
 zawiera okre¶lone wyra¿enie regularne.
