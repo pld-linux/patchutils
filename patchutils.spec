@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Text
 Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 Requires:	diffutils
 Requires:	patch
@@ -77,6 +78,7 @@ zawiera okre¶lone wyra¿enie regularne.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 
 
 %build
 %configure
