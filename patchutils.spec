@@ -1,5 +1,7 @@
 Summary:	Patchutils is a small collection of programs that operate on patch files
 Summary(pl):	Kolekcja maЁych programСw operuj╠cych na plikach patch
+Summary(ru):	Набор инструментов для работы с patch-файлами
+Summary(uk):	Наб╕р ╕нструмент╕в для роботи з patch-файлами
 Name:		patchutils
 Version:	0.2.13
 Release:	1
@@ -77,6 +79,30 @@ inkrementalnych Ёat.
 
 Grepdiff wy╤wietla listЙ plikСw modyfikowanych przez patch gdzie patch
 zawiera okre╤lone wyra©enie regularne.
+
+%description -l ru
+Patchutils содержит следующие утилиты: interdiff, combinediff,
+filterdiff, fixcvsdiff, rediff, lsdiff та splitdiff. При помощи
+interdiff можно создавать инкрементальный patch между двумя
+patch-файлами, относящимися к одному и тому же дереву исходных
+текстов. combinediff создает кумулятивный файл расхождений из двух
+инкрементальных patch-файлов. filterdiff - для удаления из набора
+patch-файлов ненужных patch'ей на основе шаблонов имен модифицируемых
+файлов. lsdiff дает список файлов, изменяемых при применении
+patch-файла. rediff корректирует patch-файлы, которые редактировались
+вручную.
+
+%description -l uk
+Patchutils м╕стить наступн╕ утил╕ти: interdiff, combinediff,
+filterdiff, fixcvsdiff, rediff, lsdiff та splitdiff. За допомогою
+interdiff можна створювати ╕нкрементальний patch м╕ж двома
+patch-файлами, що в╕дносяться до одного й того ж дерева вих╕дних
+текст╕в. combinediff створю╓ кумулятивний файл розб╕жностей з двох
+╕нкрементальних patch-файл╕в. filterdiff - для видалення з набору
+patch-файл╕в непотр╕бних patch'╕в на основ╕ шаблон╕в ╕мен файл╕в, що
+модиф╕куються. lsdiff да╓ перел╕к файл╕в, що зм╕нюються при
+"прикладанн╕" patch-файлу. rediff коректу╓ patch-файли, як╕
+редагувались вручну.
 
 %prep
 %setup -q
