@@ -1,4 +1,3 @@
-%define _pre pre3
 Summary:	Patchutils is a small collection of programs that operate on patch files
 Summary(pl):	Kolekcja maЁych programСw operuj╠cych na plikach patch
 Summary(pt_BR):	UtilitАrio para Patches
@@ -6,11 +5,11 @@ Summary(ru):	Набор инструментов для работы с patch-файлами
 Summary(uk):	Наб╕р ╕нструмент╕в для роботи з patch-файлами
 Name:		patchutils
 Version:	0.2.25
-Release:	0.%{_pre}.1
+Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}%{_pre}.tar.bz2
-# Source0-md5:	81210503d7c6a316642e0fde4b18c037
+Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.bz2
+# Source0-md5:	4a86341ad45eff6bc961c45f3af2348d
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	autoconf
@@ -137,7 +136,7 @@ patch-файл╕в непотр╕бних patch'╕в на основ╕ шаблон╕в ╕мен файл╕в, що
 редагувались вручну.
 
 %prep
-%setup -q -n %{name}-%{version}%{_pre}
+%setup -q
 %patch1 -p0
 
 %build
@@ -146,7 +145,6 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure
-
 %{__make}
 
 %install
