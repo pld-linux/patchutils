@@ -1,9 +1,10 @@
 Summary:	Patchutils is a small collection of programs that operate on patch files
 Summary(pl):	Kolekcja ma³ych programów operuj±cych na plikach patch
+Summary(pt_BR):	Utilitário para Patches
 Summary(ru):	îÁÂÏÒ ÉÎÓÔÒÕÍÅÎÔÏ× ÄÌÑ ÒÁÂÏÔÙ Ó patch-ÆÁÊÌÁÍÉ
 Summary(uk):	îÁÂ¦Ò ¦ÎÓÔÒÕÍÅÎÔ¦× ÄÌÑ ÒÏÂÏÔÉ Ú patch-ÆÁÊÌÁÍÉ
 Name:		patchutils
-Version:	0.2.21
+Version:	0.2.22
 Release:	1
 License:	GPL
 Group:		Applications/Text
@@ -79,6 +80,35 @@ inkrementalnych ³at.
 
 Grepdiff wy¶wietla listê plików modyfikowanych przez patch gdzie patch
 zawiera okre¶lone wyra¿enie regularne.
+
+%description -l pt_BR
+Interdiff gera um patch incrementado de dois patches de uma fonte
+comum. Por exemplo, se você aplicou um pre-patch (na mesma árvore
+original), você pode usar o interdiff para gerar o patch que você
+deseja aplicar. Você também pode usá-lo para rever as mudanças entre
+dois pre-patches.
+
+Combinediff gera um único patch a partir de dois patches
+incrementados, permitindo consolidar os patches em um. O patch
+resultante altera uma vez apenas cada arquivo.
+
+Filterdiff selecionará as partes dos patches que se aplicam a arquivos
+que batem com uma string do shell (ou não, se desejado).
+
+Fixcvsdiff serve para corrigir a saída do 'cvsdiff'.
+
+Rediff corrige patches escritos manualmente, comparando o patch
+original com o modificado e ajustando os contadores e os balanços.
+
+Lsdiff mostra uma pequena lista dos arquivos afetados em um patch,
+junto com (opcionalmente) o número de linhas do início de cada patch.
+
+Splitdiff separa patches de um arquivo de patch assim cada novo patch
+altera um arquivo por vez. Desta forma, um arquivo contendo várias
+adições pode ser dividido em patches individuais.
+
+Grepdiff mostra uma lista de arquivos modificados por um patch no qual
+o patch contém a expressão regular dada.
 
 %description -l ru
 Patchutils ÓÏÄÅÒÖÉÔ ÓÌÅÄÕÀİÉÅ ÕÔÉÌÉÔÙ: interdiff, combinediff,
