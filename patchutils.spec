@@ -3,7 +3,7 @@ Summary(pl):	Kolekcja maЁych programСw operuj╠cych na plikach patch
 Summary(ru):	Набор инструментов для работы с patch-файлами
 Summary(uk):	Наб╕р ╕нструмент╕в для роботи з patch-файлами
 Name:		patchutils
-Version:	0.2.14
+Version:	0.2.15
 Release:	1
 License:	GPL
 Group:		Applications/Text
@@ -110,6 +110,7 @@ patch-файл╕в непотр╕бних patch'╕в на основ╕ шаблон╕в ╕мен файл╕в, що
 
 %build
 rm -f missing
+%{__automake}
 %configure
 %{__make}
 
