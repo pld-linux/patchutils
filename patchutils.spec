@@ -9,6 +9,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.bz2
+# Source0-md5:	30f943741faba98db4b2caa58d4a19df
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	autoconf
