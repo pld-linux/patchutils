@@ -3,7 +3,7 @@ Summary(pl):	Kolekcja maЁych programСw operuj╠cych na plikach patch
 Summary(ru):	Набор инструментов для работы с patch-файлами
 Summary(uk):	Наб╕р ╕нструмент╕в для роботи з patch-файлами
 Name:		patchutils
-Version:	0.2.17
+Version:	0.2.18
 Release:	1
 License:	GPL
 Group:		Applications/Text
