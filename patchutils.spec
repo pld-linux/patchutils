@@ -2,18 +2,23 @@ Summary:	Patchutils is a small collection of programs that operate on patch file
 Summary(pl):	Kolekcja ma³ych programów operuj±cych na plikach patch
 Name:		patchutils
 Version:	0.2.11
-Release:	1
+Release:	3
 License:	GPL
 Group:		Applications/Text
 Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-fixcvsdiff.patch
+Patch2:		%{name}-context.patch
 URL:		http://cyberelk.net/tim/patchutils/
-Requires:	diffutils
-Requires:	patch
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	diffutils
 BuildRequires:	patch
+Requires:	diffutils
+Requires:	patch
+Provides:	interdiff
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	interdiff
 
 %description
 Interdiff generates an incremental patch from two patches against a
@@ -78,9 +83,14 @@ zawiera okre¶lone wyra¿enie regularne.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 
+%patch1 -p0
+%patch2 -p1
 
 %build
+rm -f missing
+aclocal
+autoconf
+automake -a -c -f
 %configure
 %{__make}
 
