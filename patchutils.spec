@@ -8,7 +8,7 @@ Version:	0.2.30
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://cyberelk.net/tim/data/%{name}/stable/%{name}-%{version}.tar.bz2
+Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.bz2
 # Source0-md5:	6a33888e34c23f7fde09a6e94e4f5950
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
@@ -141,7 +141,6 @@ patch-файл╕в непотр╕бних patch'╕в на основ╕ шаблон╕в ╕мен файл╕в, що
 %patch1 -p0
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
