@@ -1,8 +1,8 @@
 Summary:	Patchutils is a small collection of programs that operate on patch files
-Summary(pl):	Kolekcja maЁych programСw operuj╠cych na plikach patch
-Summary(pt_BR):	UtilitАrio para Patches
-Summary(ru):	Набор инструментов для работы с patch-файлами
-Summary(uk):	Наб╕р ╕нструмент╕в для роботи з patch-файлами
+Summary(pl.UTF-8):   Kolekcja maе┌ych programцЁw operujд┘cych na plikach patch
+Summary(pt_BR.UTF-8):   Utilitц║rio para Patches
+Summary(ru.UTF-8):   п²п╟п╠п╬я─ п╦п╫я│я┌я─я┐п╪п╣п╫я┌п╬п╡ п╢п╩я▐ я─п╟п╠п╬я┌я▀ я│ patch-я└п╟п╧п╩п╟п╪п╦
+Summary(uk.UTF-8):   п²п╟п╠я√я─ я√п╫я│я┌я─я┐п╪п╣п╫я┌я√п╡ п╢п╩я▐ я─п╬п╠п╬я┌п╦ п╥ patch-я└п╟п╧п╩п╟п╪п╦
 Name:		patchutils
 Version:	0.2.30
 Release:	1
@@ -54,87 +54,87 @@ incremental patches.
 Grepdiff displays a list of the files modified by a patch where the
 patch contains a given regular expression.
 
-%description -l pl
-Interdiff generuje przyrostowe patche z dwСch patchy stworzonych w
-stosunku do jednego ╪rСdЁa.
+%description -l pl.UTF-8
+Interdiff generuje przyrostowe patche z dwцЁch patchy stworzonych w
+stosunku do jednego е╨rцЁdе┌a.
 
-Combinediff generuje pojedynczy patch z dwСch przyrostowych patchy
-pozwalaj╠c na ich Ё╠czenie. Wygenerowany patch modyfikuje pliki
+Combinediff generuje pojedynczy patch z dwцЁch przyrostowych patchy
+pozwalajд┘c na ich е┌д┘czenie. Wygenerowany patch modyfikuje pliki
 jedynie jednokrotnie.
 
-Filterdiff wybierze fragmenty patcha modyfikuj╠ce pliki pasuj╠ce (lub
-nie pasuj╠ce) do wzorca shella.
+Filterdiff wybierze fragmenty patcha modyfikujд┘ce pliki pasujд┘ce (lub
+nie pasujд┘ce) do wzorca shella.
 
-Fixcvsdiff sЁu©y do poprawiania plikСw wygenerowanych przez `cvs
+Fixcvsdiff sе┌uе╪y do poprawiania plikцЁw wygenerowanych przez `cvs
 diff'.
 
-Rediff poprawia rЙcznie modyfikowane patche poprzez porСwnanie
-oryginalnego patcha ze zmodyfikowanym i poprawianie przesuniЙФ i
-zliczeЯ.
+Rediff poprawia rд≥cznie modyfikowane patche poprzez porцЁwnanie
+oryginalnego patcha ze zmodyfikowanym i poprawianie przesuniд≥д┤ i
+zliczeе└.
 
-Lsdiff wy╤wietla krСtk╠ listЙ plikСw, ktСre patch modyfikuje wraz z
-(opcjonalnie) numerami linii ka©dej zmiany.
+Lsdiff wyе⌡wietla krцЁtkд┘ listд≥ plikцЁw, ktцЁre patch modyfikuje wraz z
+(opcjonalnie) numerami linii kaе╪dej zmiany.
 
-Splitdiff dzieli patch na wiЙcej patchy tak, ©e poszczegСlne patche
-modyfikuj╠ jedynie okre╤lony plik jednokrotnie. W ten sposСb plik
-zawieraj╠cy kilka przyrostowych zmian mo©e byФ zamieniony w kilka
-przyrostowych Ёat.
+Splitdiff dzieli patch na wiд≥cej patchy tak, е╪e poszczegцЁlne patche
+modyfikujд┘ jedynie okreе⌡lony plik jednokrotnie. W ten sposцЁb plik
+zawierajд┘cy kilka przyrostowych zmian moе╪e byд┤ zamieniony w kilka
+przyrostowych е┌at.
 
-Grepdiff wy╤wietla listЙ plikСw modyfikowanych przez patch gdzie patch
-zawiera okre╤lone wyra©enie regularne.
+Grepdiff wyе⌡wietla listд≥ plikцЁw modyfikowanych przez patch gdzie patch
+zawiera okreе⌡lone wyraе╪enie regularne.
 
-%description -l pt_BR
+%description -l pt_BR.UTF-8
 Interdiff gera um patch incrementado de dois patches de uma fonte
-comum. Por exemplo, se vocЙ aplicou um pre-patch (na mesma Аrvore
-original), vocЙ pode usar o interdiff para gerar o patch que vocЙ
-deseja aplicar. VocЙ tambИm pode usА-lo para rever as mudanГas entre
+comum. Por exemplo, se vocц╙ aplicou um pre-patch (na mesma ц║rvore
+original), vocц╙ pode usar o interdiff para gerar o patch que vocц╙
+deseja aplicar. Vocц╙ tambц╘m pode usц║-lo para rever as mudanц╖as entre
 dois pre-patches.
 
-Combinediff gera um Зnico patch a partir de dois patches
+Combinediff gera um ц╨nico patch a partir de dois patches
 incrementados, permitindo consolidar os patches em um. O patch
 resultante altera uma vez apenas cada arquivo.
 
-Filterdiff selecionarА as partes dos patches que se aplicam a arquivos
-que batem com uma string do shell (ou nЦo, se desejado).
+Filterdiff selecionarц║ as partes dos patches que se aplicam a arquivos
+que batem com uma string do shell (ou nцёo, se desejado).
 
-Fixcvsdiff serve para corrigir a saМda do 'cvsdiff'.
+Fixcvsdiff serve para corrigir a saц╜da do 'cvsdiff'.
 
 Rediff corrige patches escritos manualmente, comparando o patch
-original com o modificado e ajustando os contadores e os balanГos.
+original com o modificado e ajustando os contadores e os balanц╖os.
 
 Lsdiff mostra uma pequena lista dos arquivos afetados em um patch,
-junto com (opcionalmente) o nЗmero de linhas do inМcio de cada patch.
+junto com (opcionalmente) o nц╨mero de linhas do inц╜cio de cada patch.
 
 Splitdiff separa patches de um arquivo de patch assim cada novo patch
-altera um arquivo por vez. Desta forma, um arquivo contendo vАrias
-adiГУes pode ser dividido em patches individuais.
+altera um arquivo por vez. Desta forma, um arquivo contendo vц║rias
+adiц╖ц╣es pode ser dividido em patches individuais.
 
 Grepdiff mostra uma lista de arquivos modificados por um patch no qual
-o patch contИm a expressЦo regular dada.
+o patch contц╘m a expressцёo regular dada.
 
-%description -l ru
-Patchutils содержит следующие утилиты: interdiff, combinediff,
-filterdiff, fixcvsdiff, rediff, lsdiff та splitdiff. При помощи
-interdiff можно создавать инкрементальный patch между двумя
-patch-файлами, относящимися к одному и тому же дереву исходных
-текстов. combinediff создает кумулятивный файл расхождений из двух
-инкрементальных patch-файлов. filterdiff - для удаления из набора
-patch-файлов ненужных patch'ей на основе шаблонов имен модифицируемых
-файлов. lsdiff дает список файлов, изменяемых при применении
-patch-файла. rediff корректирует patch-файлы, которые редактировались
-вручную.
+%description -l ru.UTF-8
+Patchutils я│п╬п╢п╣я─п╤п╦я┌ я│п╩п╣п╢я┐я▌я┴п╦п╣ я┐я┌п╦п╩п╦я┌я▀: interdiff, combinediff,
+filterdiff, fixcvsdiff, rediff, lsdiff я┌п╟ splitdiff. п÷я─п╦ п©п╬п╪п╬я┴п╦
+interdiff п╪п╬п╤п╫п╬ я│п╬п╥п╢п╟п╡п╟я┌я▄ п╦п╫п╨я─п╣п╪п╣п╫я┌п╟п╩я▄п╫я▀п╧ patch п╪п╣п╤п╢я┐ п╢п╡я┐п╪я▐
+patch-я└п╟п╧п╩п╟п╪п╦, п╬я┌п╫п╬я│я▐я┴п╦п╪п╦я│я▐ п╨ п╬п╢п╫п╬п╪я┐ п╦ я┌п╬п╪я┐ п╤п╣ п╢п╣я─п╣п╡я┐ п╦я│я┘п╬п╢п╫я▀я┘
+я┌п╣п╨я│я┌п╬п╡. combinediff я│п╬п╥п╢п╟п╣я┌ п╨я┐п╪я┐п╩я▐я┌п╦п╡п╫я▀п╧ я└п╟п╧п╩ я─п╟я│я┘п╬п╤п╢п╣п╫п╦п╧ п╦п╥ п╢п╡я┐я┘
+п╦п╫п╨я─п╣п╪п╣п╫я┌п╟п╩я▄п╫я▀я┘ patch-я└п╟п╧п╩п╬п╡. filterdiff - п╢п╩я▐ я┐п╢п╟п╩п╣п╫п╦я▐ п╦п╥ п╫п╟п╠п╬я─п╟
+patch-я└п╟п╧п╩п╬п╡ п╫п╣п╫я┐п╤п╫я▀я┘ patch'п╣п╧ п╫п╟ п╬я│п╫п╬п╡п╣ я┬п╟п╠п╩п╬п╫п╬п╡ п╦п╪п╣п╫ п╪п╬п╢п╦я└п╦я├п╦я─я┐п╣п╪я▀я┘
+я└п╟п╧п╩п╬п╡. lsdiff п╢п╟п╣я┌ я│п©п╦я│п╬п╨ я└п╟п╧п╩п╬п╡, п╦п╥п╪п╣п╫я▐п╣п╪я▀я┘ п©я─п╦ п©я─п╦п╪п╣п╫п╣п╫п╦п╦
+patch-я└п╟п╧п╩п╟. rediff п╨п╬я─я─п╣п╨я┌п╦я─я┐п╣я┌ patch-я└п╟п╧п╩я▀, п╨п╬я┌п╬я─я▀п╣ я─п╣п╢п╟п╨я┌п╦я─п╬п╡п╟п╩п╦я│я▄
+п╡я─я┐я┤п╫я┐я▌.
 
-%description -l uk
-Patchutils м╕стить наступн╕ утил╕ти: interdiff, combinediff,
-filterdiff, fixcvsdiff, rediff, lsdiff та splitdiff. За допомогою
-interdiff можна створювати ╕нкрементальний patch м╕ж двома
-patch-файлами, що в╕дносяться до одного й того ж дерева вих╕дних
-текст╕в. combinediff створю╓ кумулятивний файл розб╕жностей з двох
-╕нкрементальних patch-файл╕в. filterdiff - для видалення з набору
-patch-файл╕в непотр╕бних patch'╕в на основ╕ шаблон╕в ╕мен файл╕в, що
-модиф╕куються. lsdiff да╓ перел╕к файл╕в, що зм╕нюються при
-"прикладанн╕" patch-файлу. rediff коректу╓ patch-файли, як╕
-редагувались вручну.
+%description -l uk.UTF-8
+Patchutils п╪я√я│я┌п╦я┌я▄ п╫п╟я│я┌я┐п©п╫я√ я┐я┌п╦п╩я√я┌п╦: interdiff, combinediff,
+filterdiff, fixcvsdiff, rediff, lsdiff я┌п╟ splitdiff. п≈п╟ п╢п╬п©п╬п╪п╬пЁп╬я▌
+interdiff п╪п╬п╤п╫п╟ я│я┌п╡п╬я─я▌п╡п╟я┌п╦ я√п╫п╨я─п╣п╪п╣п╫я┌п╟п╩я▄п╫п╦п╧ patch п╪я√п╤ п╢п╡п╬п╪п╟
+patch-я└п╟п╧п╩п╟п╪п╦, я┴п╬ п╡я√п╢п╫п╬я│я▐я┌я▄я│я▐ п╢п╬ п╬п╢п╫п╬пЁп╬ п╧ я┌п╬пЁп╬ п╤ п╢п╣я─п╣п╡п╟ п╡п╦я┘я√п╢п╫п╦я┘
+я┌п╣п╨я│я┌я√п╡. combinediff я│я┌п╡п╬я─я▌я■ п╨я┐п╪я┐п╩я▐я┌п╦п╡п╫п╦п╧ я└п╟п╧п╩ я─п╬п╥п╠я√п╤п╫п╬я│я┌п╣п╧ п╥ п╢п╡п╬я┘
+я√п╫п╨я─п╣п╪п╣п╫я┌п╟п╩я▄п╫п╦я┘ patch-я└п╟п╧п╩я√п╡. filterdiff - п╢п╩я▐ п╡п╦п╢п╟п╩п╣п╫п╫я▐ п╥ п╫п╟п╠п╬я─я┐
+patch-я└п╟п╧п╩я√п╡ п╫п╣п©п╬я┌я─я√п╠п╫п╦я┘ patch'я√п╡ п╫п╟ п╬я│п╫п╬п╡я√ я┬п╟п╠п╩п╬п╫я√п╡ я√п╪п╣п╫ я└п╟п╧п╩я√п╡, я┴п╬
+п╪п╬п╢п╦я└я√п╨я┐я▌я┌я▄я│я▐. lsdiff п╢п╟я■ п©п╣я─п╣п╩я√п╨ я└п╟п╧п╩я√п╡, я┴п╬ п╥п╪я√п╫я▌я▌я┌я▄я│я▐ п©я─п╦
+"п©я─п╦п╨п╩п╟п╢п╟п╫п╫я√" patch-я└п╟п╧п╩я┐. rediff п╨п╬я─п╣п╨я┌я┐я■ patch-я└п╟п╧п╩п╦, я▐п╨я√
+я─п╣п╢п╟пЁя┐п╡п╟п╩п╦я│я▄ п╡я─я┐я┤п╫я┐.
 
 %prep
 %setup -q
