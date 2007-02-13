@@ -1,8 +1,8 @@
 Summary:	Patchutils is a small collection of programs that operate on patch files
-Summary(pl.UTF-8):   Kolekcja małych programów operujących na plikach patch
-Summary(pt_BR.UTF-8):   Utilitário para Patches
-Summary(ru.UTF-8):   Набор инструментов для работы с patch-файлами
-Summary(uk.UTF-8):   Набір інструментів для роботи з patch-файлами
+Summary(pl.UTF-8):	Kolekcja małych programów operujących na plikach patch
+Summary(pt_BR.UTF-8):	Utilitário para Patches
+Summary(ru.UTF-8):	Набор инструментов для работы с patch-файлами
+Summary(uk.UTF-8):	Набір інструментів для роботи з patch-файлами
 Name:		patchutils
 Version:	0.2.30
 Release:	1
