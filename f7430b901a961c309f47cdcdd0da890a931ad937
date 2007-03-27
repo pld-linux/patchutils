@@ -1,0 +1,2 @@
+- updated to 0.2.20
+- added %{__aclocal} and %{__autoconf}
