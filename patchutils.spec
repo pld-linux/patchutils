@@ -10,6 +10,7 @@ License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.xz
 # Source0-md5:	b640b6b8af6183f83eacf7bd6d2460cb
+Patch0:		%{name}-format.patch
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	perl-base
@@ -136,6 +137,7 @@ patch-файлів непотрібних patch'ів на основі шабл�
 
 %prep
 %setup -q
+%patch0 -p1
 %patch1 -p0
 
 %build
