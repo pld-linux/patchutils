@@ -4,15 +4,17 @@ Summary(pt_BR.UTF-8):	Utilitário para Patches
 Summary(ru.UTF-8):	Набор инструментов для работы с patch-файлами
 Summary(uk.UTF-8):	Набір інструментів для роботи з patch-файлами
 Name:		patchutils
-Version:	0.3.2
+Version:	0.3.3
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Applications/Text
-Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.bz2
-# Source0-md5:	74607b4a28c9009c6aeeed0e91098917
+Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.xz
+# Source0-md5:	b640b6b8af6183f83eacf7bd6d2460cb
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	perl-base
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	diffutils
 Requires:	patch
 Provides:	interdiff
@@ -151,6 +153,32 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man?/*
+%doc AUTHORS BUGS ChangeLog NEWS README TODO
+%attr(755,root,root) %{_bindir}/combinediff
+%attr(755,root,root) %{_bindir}/dehtmldiff
+%attr(755,root,root) %{_bindir}/editdiff
+%attr(755,root,root) %{_bindir}/espdiff
+%attr(755,root,root) %{_bindir}/filterdiff
+%attr(755,root,root) %{_bindir}/fixcvsdiff
+%attr(755,root,root) %{_bindir}/flipdiff
+%attr(755,root,root) %{_bindir}/grepdiff
+%attr(755,root,root) %{_bindir}/interdiff
+%attr(755,root,root) %{_bindir}/lsdiff
+%attr(755,root,root) %{_bindir}/recountdiff
+%attr(755,root,root) %{_bindir}/rediff
+%attr(755,root,root) %{_bindir}/splitdiff
+%attr(755,root,root) %{_bindir}/unwrapdiff
+%{_mandir}/man1/combinediff.1*
+%{_mandir}/man1/dehtmldiff.1*
+%{_mandir}/man1/editdiff.1*
+%{_mandir}/man1/espdiff.1*
+%{_mandir}/man1/filterdiff.1*
+%{_mandir}/man1/fixcvsdiff.1*
+%{_mandir}/man1/flipdiff.1*
+%{_mandir}/man1/grepdiff.1*
+%{_mandir}/man1/interdiff.1*
+%{_mandir}/man1/lsdiff.1*
+%{_mandir}/man1/recountdiff.1*
+%{_mandir}/man1/rediff.1*
+%{_mandir}/man1/splitdiff.1*
+%{_mandir}/man1/unwrapdiff.1*
