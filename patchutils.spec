@@ -8,18 +8,20 @@ Version:	0.3.4
 Release:	1
 License:	GPL v2+
 Group:		Applications/Text
+# also http://cyberelk.net/tim/data/patchutils/stable/
 Source0:	https://github.com/twaugh/patchutils/archive/%{version}.tar.gz
 # Source0-md5:	c3f709900079946109e539b11ee52d6c
 Patch0:		%{name}-format.patch
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.50
+BuildRequires:	automake >= 1.6
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
+BuildRequires:	xmlto
 BuildRequires:	xz
 Requires:	diffutils
-Requires:	patch
+Requires:	patch >= 2.1
 Provides:	interdiff
 Obsoletes:	interdiff
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
