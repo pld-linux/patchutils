@@ -1,5 +1,5 @@
---- fixcvsdiff-ori.in	Fri Apr 19 21:32:12 2002
-+++ fixcvsdiff.in	Fri Apr 19 21:36:57 2002
+--- scripts/fixcvsdiff-ori.in	Fri Apr 19 21:32:12 2002
++++ scripts/fixcvsdiff.in	Fri Apr 19 21:36:57 2002
 @@ -10,6 +10,8 @@
  #
  # -b keeps a .bak backup file

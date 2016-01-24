@@ -4,15 +4,17 @@ Summary(pt_BR.UTF-8):	Utilitário para Patches
 Summary(ru.UTF-8):	Набор инструментов для работы с patch-файлами
 Summary(uk.UTF-8):	Набір інструментів для роботи з patch-файлами
 Name:		patchutils
-Version:	0.3.3
-Release:	2
+Version:	0.3.4
+Release:	1
 License:	GPL v2+
 Group:		Applications/Text
-Source0:	http://cyberelk.net/tim/data/patchutils/stable/%{name}-%{version}.tar.xz
-# Source0-md5:	b640b6b8af6183f83eacf7bd6d2460cb
+Source0:	https://github.com/twaugh/patchutils/archive/%{version}.tar.gz
+# Source0-md5:	c3f709900079946109e539b11ee52d6c
 Patch0:		%{name}-format.patch
 Patch1:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -141,6 +143,10 @@ patch-файлів непотрібних patch'ів на основі шабл�
 %patch1 -p0
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make}
 
