@@ -4,18 +4,18 @@ Summary(pt_BR.UTF-8):	Utilitário para Patches
 Summary(ru.UTF-8):	Набор инструментов для работы с patch-файлами
 Summary(uk.UTF-8):	Набір інструментів для роботи з patch-файлами
 Name:		patchutils
-Version:	0.3.4
+Version:	0.4.2
 Release:	1
 License:	GPL v2+
 Group:		Applications/Text
 # also http://cyberelk.net/tim/data/patchutils/stable/
 Source0:	https://github.com/twaugh/patchutils/archive/%{version}.tar.gz
-# Source0-md5:	c3f709900079946109e539b11ee52d6c
-Patch0:		%{name}-format.patch
-Patch1:		%{name}-fixcvsdiff.patch
+# Source0-md5:	c7bfa14a0f9e07b995f8eac9227cb1bf
+Patch0:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.6
+BuildRequires:	pcre2-posix-devel
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto
@@ -141,15 +141,15 @@ patch-файлів непотрібних patch'ів на основі шабл�
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p0
+%patch0 -p0
 
 %build
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--with-pcre2
 %{__make}
 
 %install
@@ -171,12 +171,17 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/filterdiff
 %attr(755,root,root) %{_bindir}/fixcvsdiff
 %attr(755,root,root) %{_bindir}/flipdiff
+%attr(755,root,root) %{_bindir}/gitdiff
+%attr(755,root,root) %{_bindir}/gitdiffview
 %attr(755,root,root) %{_bindir}/grepdiff
 %attr(755,root,root) %{_bindir}/interdiff
 %attr(755,root,root) %{_bindir}/lsdiff
+%attr(755,root,root) %{_bindir}/patchview
 %attr(755,root,root) %{_bindir}/recountdiff
 %attr(755,root,root) %{_bindir}/rediff
 %attr(755,root,root) %{_bindir}/splitdiff
+%attr(755,root,root) %{_bindir}/svndiff
+%attr(755,root,root) %{_bindir}/svndiffview
 %attr(755,root,root) %{_bindir}/unwrapdiff
 %{_mandir}/man1/combinediff.1*
 %{_mandir}/man1/dehtmldiff.1*
@@ -188,6 +193,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/grepdiff.1*
 %{_mandir}/man1/interdiff.1*
 %{_mandir}/man1/lsdiff.1*
+%{_mandir}/man1/patchview.1*
 %{_mandir}/man1/recountdiff.1*
 %{_mandir}/man1/rediff.1*
 %{_mandir}/man1/splitdiff.1*
