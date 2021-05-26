@@ -8,7 +8,7 @@
 +# 
  # Based on code by Amir Karger <karger@post.harvard.edu>
  #
- # Modified by John Levon <moz@compsoc.man.ac.uk>
+ # Modified by John Levon <moz@compsoc.man.ac.uk> and
 @@ -20,10 +22,10 @@
  # your option) any later version.
  
@@ -33,7 +33,7 @@
  	if (!defined($Filename)) {
  		print;
 @@ -72,5 +77,9 @@
- 			$add = 0;
+ 			s/^(---|\+\+\+) [^\t]+/$1 $Filename/;
  		}
  	}
 +	if($opt_a) {
