@@ -5,7 +5,7 @@ Summary(ru.UTF-8):	Набор инструментов для работы с pa
 Summary(uk.UTF-8):	Набір інструментів для роботи з patch-файлами
 Name:		patchutils
 Version:	0.4.2
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Text
 # also http://cyberelk.net/tim/data/patchutils/stable/
