@@ -5,10 +5,11 @@ Summary(ru.UTF-8):	Набор инструментов для работы с pa
 Summary(uk.UTF-8):	Набір інструментів для роботи з patch-файлами
 Name:		patchutils
 Version:	0.4.2
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications/Text
 # also http://cyberelk.net/tim/data/patchutils/stable/
+# TODO: use https://github.com/twaugh/patchutils/archive/%{version}/%{name}-%{version}.tar.gz
 Source0:	https://github.com/twaugh/patchutils/archive/%{version}.tar.gz
 # Source0-md5:	c7bfa14a0f9e07b995f8eac9227cb1bf
 Patch0:		%{name}-fixcvsdiff.patch
@@ -158,6 +159,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# conflict with subversion-tools
+
+%{__rm} $RPM_BUILD_ROOT%{_bindir}/svndiff
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -180,7 +185,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/recountdiff
 %attr(755,root,root) %{_bindir}/rediff
 %attr(755,root,root) %{_bindir}/splitdiff
-%attr(755,root,root) %{_bindir}/svndiff
 %attr(755,root,root) %{_bindir}/svndiffview
 %attr(755,root,root) %{_bindir}/unwrapdiff
 %{_mandir}/man1/combinediff.1*
