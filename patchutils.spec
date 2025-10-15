@@ -4,14 +4,13 @@ Summary(pt_BR.UTF-8):	Utilitário para Patches
 Summary(ru.UTF-8):	Набор инструментов для работы с patch-файлами
 Summary(uk.UTF-8):	Набір інструментів для роботи з patch-файлами
 Name:		patchutils
-Version:	0.4.2
-Release:	3
+Version:	0.4.4
+Release:	1
 License:	GPL v2+
 Group:		Applications/Text
 # also http://cyberelk.net/tim/data/patchutils/stable/
-# TODO: use https://github.com/twaugh/patchutils/archive/%{version}/%{name}-%{version}.tar.gz
-Source0:	https://github.com/twaugh/patchutils/archive/%{version}.tar.gz
-# Source0-md5:	c7bfa14a0f9e07b995f8eac9227cb1bf
+Source0:	https://github.com/twaugh/patchutils/releases/download/%{version}/%{name}-%{version}.tar.xz
+# Source0-md5:	7781c0d48979d2dc2c7cfeec831b5232
 Patch0:		%{name}-fixcvsdiff.patch
 URL:		http://cyberelk.net/tim/patchutils/
 BuildRequires:	autoconf >= 2.50
@@ -168,7 +167,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS BUGS ChangeLog NEWS README TODO
+%doc AUTHORS BUGS ChangeLog NEWS README.md TODO
 %attr(755,root,root) %{_bindir}/combinediff
 %attr(755,root,root) %{_bindir}/dehtmldiff
 %attr(755,root,root) %{_bindir}/editdiff
@@ -178,6 +177,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/flipdiff
 %attr(755,root,root) %{_bindir}/gitdiff
 %attr(755,root,root) %{_bindir}/gitdiffview
+%attr(755,root,root) %{_bindir}/gitshow
+%attr(755,root,root) %{_bindir}/gitshowview
 %attr(755,root,root) %{_bindir}/grepdiff
 %attr(755,root,root) %{_bindir}/interdiff
 %attr(755,root,root) %{_bindir}/lsdiff
@@ -194,6 +195,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/filterdiff.1*
 %{_mandir}/man1/fixcvsdiff.1*
 %{_mandir}/man1/flipdiff.1*
+%{_mandir}/man1/gitdiff.1*
+%{_mandir}/man1/gitdiffview.1*
+%{_mandir}/man1/gitshow.1*
+%{_mandir}/man1/gitshowview.1*
 %{_mandir}/man1/grepdiff.1*
 %{_mandir}/man1/interdiff.1*
 %{_mandir}/man1/lsdiff.1*
@@ -201,4 +206,25 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/recountdiff.1*
 %{_mandir}/man1/rediff.1*
 %{_mandir}/man1/splitdiff.1*
+%{_mandir}/man1/svndiff.1*
+%{_mandir}/man1/svndiffview.1*
 %{_mandir}/man1/unwrapdiff.1*
+%{bash_compdir}/combinediff
+%{bash_compdir}/dehtmldiff
+%{bash_compdir}/editdiff
+%{bash_compdir}/espdiff
+%{bash_compdir}/filterdiff
+%{bash_compdir}/fixcvsdiff
+%{bash_compdir}/flipdiff
+%{bash_compdir}/gitdiff
+%{bash_compdir}/gitdiffview
+%{bash_compdir}/grepdiff
+%{bash_compdir}/interdiff
+%{bash_compdir}/lsdiff
+%{bash_compdir}/patchview
+%{bash_compdir}/recountdiff
+%{bash_compdir}/rediff
+%{bash_compdir}/splitdiff
+%{bash_compdir}/svndiff
+%{bash_compdir}/svndiffview
+%{bash_compdir}/unwrapdiff
