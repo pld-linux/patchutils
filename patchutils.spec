@@ -23,8 +23,8 @@ BuildRequires:	xz
 Requires:	diffutils
 Requires:	patch >= 2.1
 Provides:	interdiff
-Conflicts:	bash-completion < 1:2.11-3
 Obsoletes:	interdiff
+Conflicts:	bash-completion < 1:2.11-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
